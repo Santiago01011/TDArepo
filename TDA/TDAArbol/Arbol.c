@@ -170,7 +170,115 @@ int arbolLeerDesdeArchivo(void *dest, void *orig, unsigned pos, size_t tam){
 
 
 
+int arbol_cargar_iterativo(tArbolBinBusq *pa, const void * dato, unsigned tam, int cmp(const void*, const void*))
+{
+    tNodoArbol *nue;
+    int         rc;
 
+    while(*pa)
+    {
+        if((rc = cmp(dato,(*pa)->info)) < 0)
+            pa = &(*pa)->izq;
+        else if (rc > 0)
+            pa = &(*pa)->der;
+        else
+        {
+            printf("//Error: Clave Duplicada//\n");
+            return 1;
+        }
+    }
+
+    if(!reservarMemoriaNodo(nue,sizeof(tNodoArbol),nue->info,tam))
+    {
+        printf("//Error: Memoria Insuficiente//\n");
+        return 1;
+    }
+
+    nue->tamInfo = tam;
+    memcpy_ALU(nue->info,dato,tam);
+
+    nue->der = nue->izq = NULL;
+
+    *pa = nue;
+
+    return 0;
+}
+
+int arbol_recorrer_preorden(const tArbolBinBusq *pa, void * params, void accion(void *, unsigned, unsigned, void *))
+{
+    arbol_recorrer_rec_preorden(pa,0,params,accion);
+
+    return 0;
+}
+
+int arbol_recorrer_rec_preorden(const tArbolBinBusq *pa, unsigned n, void * params, void accion(void *, unsigned, unsigned, void *))
+{
+    if(!*pa)
+        return 0;
+
+    accion((*pa)->info,(*pa)->tamInfo,n,params);
+    arbol_recorrer_rec_preorden(&(*pa)->izq,n+1,params,accion);
+    arbol_recorrer_rec_preorden(&(*pa)->der,n+1,params,accion);
+
+    return 0;
+}
+
+int arbol_recorrer_orden(const tArbolBinBusq *pa, void * params, void accion(void *, unsigned, unsigned, void *))
+{
+    arbol_recorrer_rec_orden(pa,0,params,accion);
+
+    return 0;
+}
+
+int arbol_recorrer_rec_orden(const tArbolBinBusq *pa, unsigned n, void * params, void accion(void *, unsigned, unsigned, void *))
+{
+    if(!*pa)
+        return 0;
+
+    arbol_recorrer_rec_orden(&(*pa)->izq,n+1,params,accion);
+    accion((*pa)->info,(*pa)->tamInfo,n,params);
+    arbol_recorrer_rec_orden(&(*pa)->der,n+1,params,accion);
+
+    return 0;
+}
+
+int arbol_recorrer_inv_orden(const tArbolBinBusq *pa, void * params, void accion(void *, unsigned, unsigned, void *))
+{
+    arbol_recorrer_rec_inv_orden(pa,0,params,accion);
+
+    return 0;
+}
+
+int arbol_recorrer_rec_inv_orden(const tArbolBinBusq *pa, unsigned n, void * params, void accion(void *, unsigned, unsigned, void *))
+{
+    if(!*pa)
+        return 0;
+
+    arbol_recorrer_rec_inv_orden(&(*pa)->der,n+1,params,accion);
+    accion((*pa)->info,(*pa)->tamInfo,n,params);
+    arbol_recorrer_rec_inv_orden(&(*pa)->izq,n+1,params,accion);
+
+    return 0;
+}
+
+int arbol_recorrer_posorden(const tArbolBinBusq *pa, void * params, void accion(void *, unsigned, unsigned, void *))
+{
+    arbol_recorrer_rec_posorden(pa,0,params,accion);
+
+    return 0;
+}
+
+int arbol_recorrer_rec_posorden(const tArbolBinBusq *pa, unsigned n, void * params, void accion(void *, unsigned, unsigned, void *))
+{
+    if(!*pa)
+        return 0;
+
+    arbol_recorrer_rec_posorden(&(*pa)->izq,n+1,params,accion);
+    arbol_recorrer_rec_posorden(&(*pa)->der,n+1,params,accion);
+    accion((*pa)->info,(*pa)->tamInfo,n,params);
+
+    return 0;
+}
 
 
 
