@@ -1,4 +1,5 @@
 #include "Arbol.h"
+#define MIN(x,y) ((x) > (y)? (x) : (y))
 
 int arbolLeerDesdeVec(void *dest, void *orig, unsigned pos, size_t tam);
 int arbolLeerDesdeArchivo(void *dest, void *orig, unsigned pos, size_t tam);
@@ -169,7 +170,14 @@ int arbolLeerDesdeArchivo(void *dest, void *orig, unsigned pos, size_t tam){
 }
 
 
-
+int buscarElemArbolBinBusq(const tArbol *p, void *d, unsigned tam,
+                             int (*cmp)(const void *, const void *))
+{
+    if(!(p = buscar_nodo(p,d,cmp)))
+        return 0; //nodo no encontrado
+    memcpy(d,(*p)->info,MIN(tam,(*p)->tamInfo));
+    return 1;
+}
 
 
 
