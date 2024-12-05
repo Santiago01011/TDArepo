@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1733298645 source:c:\users\santi\onedrive - universidad nacional de la matanza\escritorio\unlam\programacion\topicos de programación\parcial\finalpalabrassimbolos\main.c
+	"main.h"
+
+1733412406 c:\users\santi\onedrive - universidad nacional de la matanza\escritorio\unlam\programacion\topicos de programación\parcial\finalpalabrassimbolos\main.h
+	<stdio.h>
+	<stdlib.h>
+	<stdio.h>
+	<string.h>
+
+1733413058 source:c:\users\santi\onedrive - universidad nacional de la matanza\escritorio\unlam\programacion\topicos de programación\parcial\finalpalabrassimbolos\source.c
+	"main.h"
+
