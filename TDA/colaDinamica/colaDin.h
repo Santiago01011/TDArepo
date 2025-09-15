@@ -1,36 +1,40 @@
-#ifndef COLAEST_H
-#define COLAEST_H
+#ifndef COLADIN_H
+#define COLADIN_H
 
 #include <stdlib.h>
 #include <string.h>
 
-#define TAM_COLA 300
-
-#define MINIMO(a, b) ((a) < (b) ? (a) : (b))
+/**
+ * @brief Representa cada Nodo de la cola.
+ * Cada nodo contiene un puntero a la información, el tamaño de la información
+ * y un puntero al siguiente nodo en la cola.
+ */
+typedef struct sNodo
+{
+    void *info;
+    size_t tamInfo;
+    struct sNodo *sig;
+} tNodo;
 
 /**
- * @brief Representa la cola estática.
- * Abstracción de una cola circular en un vector de tamaño fijo.
- * Contiene un array para almacenar los datos, índices para el primer y último
- * elemento, y el tamaño disponible.
+ * @brief Representa la cola dinámica.
+ * Contiene punteros al primer y último nodo (elemento) de la cola.
  */
 typedef struct
 {
-    char cola[TAM_COLA];
-    size_t pri, ult;
-    size_t tamDisp;
+    tNodo *ini;
+    tNodo *fin;
 } tCola;
 
 /**
- * @brief Inicializa la cola estática.
+ * @brief Inicializa la cola dinámica.
  * @param p Puntero a la cola que se desea inicializar.
  * @return Devuelve 1 si la cola se creó correctamente, 0 en caso contrario.
  */
 int crearCola(tCola *p);
 
 /**
- * @brief Limpia la cola, deja sus índices en la posición inicial y
- * establece el tamaño disponible al máximo.
+ * @brief Libera la memoria asignada a la cola y los elementos que contenía.
  * @param p Puntero a la cola.
  */
 void vaciarCola(tCola *p);
@@ -39,8 +43,8 @@ void vaciarCola(tCola *p);
  * @brief Inserta un nuevo elemento al final de la cola.
  * @param p Puntero a la cola donde se insertará el nuevo elemento.
  * @param d Puntero a los datos que se desean insertar en la cola.
- * @param tamElem Tamaño en bytes del elemento a insertar.
- * @return Devuelve 1 si se pudo insertar el elemento, 0 en caso contrario.
+ * @param tamElem Tamaño en bytes de los datos a insertar.
+ * @return Devuelve 1 si el elemento se insertó correctamente, 0 en caso contrario.
  */
 int ponerEnCola(tCola *p, const void *d, size_t tamElem);
 
@@ -49,6 +53,7 @@ int ponerEnCola(tCola *p, const void *d, size_t tamElem);
  * @param p Puntero a la cola desde donde se extraerá el elemento.
  * @param d Puntero donde se almacenarán los datos extraídos de la cola.
  * @param tamElem Tamaño en bytes de espacio disponible en `d`.
+ * @return Devuelve 1 si el elemento se extrajo correctamente, 0 en caso contrario.
  */
 int sacarDeCola(tCola *p, void *d, size_t tamElem);
 
@@ -61,6 +66,7 @@ int sacarDeCola(tCola *p, void *d, size_t tamElem);
  */
 int verSiguienteEnCola(const tCola *p, void *d, size_t tamElem);
 
+
 /**
  * @brief Verifica si la cola está vacía.
  * @param p Puntero a la cola a verificar.
@@ -69,18 +75,10 @@ int verSiguienteEnCola(const tCola *p, void *d, size_t tamElem);
 int colaVacia(const tCola *p);
 
 /**
- * @brief Verifica si la cola está llena.
- * @param p Puntero a la cola.
- * @param tamElem Cantidad de bytes a verificar.
- * @return Devuelve 1 si la cola está llena, 0 en caso contrario.
- */
-int colaLlena(const tCola *p, size_t tamElem);
-
-/**
- * @brief Devuelve la cantidad de elementos restantes en la cola.
+ * @brief Cuenta la cantidad de elementos restantes en la cola.
  * @param p Puntero a la cola de la que retornar su cantidad de elementos.
  * @return La cantidad de elementos actualmente en cola.
  */
 int cantidadElementosEnCola(const tCola *p);
 
-#endif // COLAEST_H
+#endif // COLADIN_H
