@@ -1,23 +1,26 @@
 #ifndef PILADIN_H
 #define PILADIN_H
 
+#include <stdlib.h>
+#include <string.h>
+
 /**
  * @brief Representa cada Nodo de la pila.
  * Cada nodo contiene un puntero a la información, el tamaño de la información
  * y un puntero al siguiente nodo en la pila.
  */
-typedef struct sNodo
+typedef struct sNodoPila
 {
     void *info;
     size_t tamInfo;
-    struct sNodo *sig;
-} tNodo;
+    struct sNodoPila *sig;
+} tNodoPila;
 
 /**
  * @brief Representa la pila dinámica.
  * Contiene un puntero al nodo superior de la pila.
  */
-typedef tNodo *tPila;
+typedef tNodoPila *tPila;
 
 /**
  * @brief Inicializa una nueva pila.

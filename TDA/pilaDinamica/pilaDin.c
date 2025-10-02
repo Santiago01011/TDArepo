@@ -1,14 +1,15 @@
 #include "pilaDin.h"
 #include <stdio.h>
 
-void crearPila(tPila *p)
+int crearPila(tPila *p)
 {
     *p = NULL;
+    return 1;
 }
 
 void vaciarPila(tPila *p)
 {
-    tNodo *aux = NULL;
+    tNodoPila *aux = NULL;
     while (*p)
     {
         aux = *p;
@@ -20,7 +21,7 @@ void vaciarPila(tPila *p)
 
 int ponerEnPila(tPila *p, const void *d, size_t tamElem)
 {
-    tNodo *nue = (tNodo *)malloc(sizeof(tNodo));
+    tNodoPila *nue = (tNodoPila *)malloc(sizeof(tNodoPila));
     if (!nue)
         return 0;
     nue->info = malloc(tamElem);
@@ -38,7 +39,7 @@ int ponerEnPila(tPila *p, const void *d, size_t tamElem)
 
 int sacarDePila(tPila *p, void *d, size_t tamElem)
 {
-    tNodo *aux = *p;
+    tNodoPila *aux = *p;
     if (!*p)
         return 0;
     memcpy(d, aux->info, tamElem < aux->tamInfo ? tamElem : aux->tamInfo);
@@ -50,7 +51,7 @@ int sacarDePila(tPila *p, void *d, size_t tamElem)
 
 int verTopePila(const tPila *p, void *d, size_t tamElem)
 {
-    tNodo *aux = *p;
+    tNodoPila *aux = *p;
     if (!*p)
         return 0;
     memcpy(d, aux->info, tamElem < aux->tamInfo ? tamElem : aux->tamInfo);
