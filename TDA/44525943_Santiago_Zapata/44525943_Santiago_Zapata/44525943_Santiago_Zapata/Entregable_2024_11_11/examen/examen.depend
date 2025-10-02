@@ -1,0 +1,71 @@
+# depslib dependency file v1.0
+1731373460 source:c:\users\laboratorios\desktop\entregable_2024_11_11\examen\cola_dinamica.c
+	"../include/cola_dinamica.h"
+
+1731374002 source:c:\users\laboratorios\desktop\entregable_2024_11_11\examen\ferreteria.c
+	"../include/ferreteria.h"
+	"../include/utilitarias.h"
+
+1731372545 source:c:\users\laboratorios\desktop\entregable_2024_11_11\examen\main.c
+	<stdio.h>
+	<stdlib.h>
+	<ferreteria.h>
+	<utilitarias.h>
+
+1731368400 c:\users\laboratorios\desktop\entregable_2024_11_11\include\ferreteria.h
+	"arbol.h"
+	"cola_dinamica.h"
+
+1709007578 c:\users\laboratorios\desktop\entregable_2024_11_11\include\utilitarias.h
+	<ferreteria.h>
+	<stdio.h>
+
+1709009595 source:c:\users\laboratorios\desktop\entregable_2024_11_11\examen\utilitarias.c
+
+1731364145 source:c:\users\laboratorios\desktop\entregable_2024_11_11\examen\arbol.c
+	"../include/arbol.h"
+
+1656992784 c:\users\laboratorios\desktop\entregable_2024_11_11\include\arbol.h
+	<string.h>
+	<stdlib.h>
+	<stdio.h>
+	<math.h>
+
+1731365083 c:\users\laboratorios\desktop\entregable_2024_11_11\include\cola_dinamica.h
+	<string.h>
+
+1732496363 source:c:\users\santi\onedrive - universidad nacional de la matanza\escritorio\algoritmos\parcialespractica\44525943_santiago_zapata\44525943_santiago_zapata\entregable_2024_11_11\examen\arbol.c
+	"../include/arbol.h"
+
+1732391612 c:\users\santi\onedrive - universidad nacional de la matanza\escritorio\algoritmos\parcialespractica\44525943_santiago_zapata\44525943_santiago_zapata\entregable_2024_11_11\include\arbol.h
+	<string.h>
+	<stdlib.h>
+	<stdio.h>
+	<math.h>
+
+1732488704 source:c:\users\santi\onedrive - universidad nacional de la matanza\escritorio\algoritmos\parcialespractica\44525943_santiago_zapata\44525943_santiago_zapata\entregable_2024_11_11\examen\cola_dinamica.c
+	"../include/cola_dinamica.h"
+
+1732488702 c:\users\santi\onedrive - universidad nacional de la matanza\escritorio\algoritmos\parcialespractica\44525943_santiago_zapata\44525943_santiago_zapata\entregable_2024_11_11\include\cola_dinamica.h
+	<string.h>
+
+1732407000 source:c:\users\santi\onedrive - universidad nacional de la matanza\escritorio\algoritmos\parcialespractica\44525943_santiago_zapata\44525943_santiago_zapata\entregable_2024_11_11\examen\main.c
+	<stdio.h>
+	<stdlib.h>
+	<ferreteria.h>
+	<utilitarias.h>
+
+1732402294 c:\users\santi\onedrive - universidad nacional de la matanza\escritorio\algoritmos\parcialespractica\44525943_santiago_zapata\44525943_santiago_zapata\entregable_2024_11_11\include\ferreteria.h
+	"arbol.h"
+	"cola_dinamica.h"
+
+1732391612 c:\users\santi\onedrive - universidad nacional de la matanza\escritorio\algoritmos\parcialespractica\44525943_santiago_zapata\44525943_santiago_zapata\entregable_2024_11_11\include\utilitarias.h
+	<ferreteria.h>
+	<stdio.h>
+
+1732391612 source:c:\users\santi\onedrive - universidad nacional de la matanza\escritorio\algoritmos\parcialespractica\44525943_santiago_zapata\44525943_santiago_zapata\entregable_2024_11_11\examen\utilitarias.c
+
+1732496344 source:c:\users\santi\onedrive - universidad nacional de la matanza\escritorio\algoritmos\parcialespractica\44525943_santiago_zapata\44525943_santiago_zapata\entregable_2024_11_11\examen\ferreteria.c
+	"../include/ferreteria.h"
+	"../include/utilitarias.h"
+

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_layout_file>
+	<FileVersion major="1" minor="0" />
+	<ActiveTarget name="Debug" />
+	<File name="..\Comun\Comun.h" open="1" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="0" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="main.c" open="1" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="6" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="13496" topLine="80" />
+		</Cursor>
+		<Folding>
+			<Collapse line="70" />
+			<Collapse line="142" />
+			<Collapse line="195" />
+			<Collapse line="217" />
+			<Collapse line="224" />
+			<Collapse line="228" />
+			<Collapse line="233" />
+			<Collapse line="255" />
+			<Collapse line="266" />
+			<Collapse line="295" />
+			<Collapse line="309" />
+			<Collapse line="317" />
+			<Collapse line="322" />
+			<Collapse line="328" />
+			<Collapse line="335" />
+			<Collapse line="343" />
+			<Collapse line="386" />
+			<Collapse line="392" />
+			<Collapse line="412" />
+			<Collapse line="423" />
+			<Collapse line="429" />
+			<Collapse line="440" />
+			<Collapse line="449" />
+			<Collapse line="461" />
+			<Collapse line="474" />
+		</Folding>
+	</File>
+	<File name="..\Vector\Vector.h" open="1" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="135" topLine="0" />
+		</Cursor>
+	</File>
+</CodeBlocks_layout_file>
