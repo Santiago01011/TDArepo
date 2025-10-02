@@ -9,7 +9,7 @@ int crearCola(tCola *p)
 
 void vaciarCola(tCola *p)
 {
-    tNodo *aux = NULL;
+    tNodoCola *aux = NULL;
     while (p->ini)
     {
         aux = p->ini;
@@ -22,7 +22,9 @@ void vaciarCola(tCola *p)
 
 int ponerEnCola(tCola *p, const void *d, size_t tamElem)
 {
-    tNodo *nue = (tNodo *)malloc(sizeof(tNodo));
+    if(!p)
+        return 0;
+    tNodoCola *nue = (tNodoCola *)malloc(sizeof(tNodoCola));
     if (!nue)
         return 0;
 
@@ -37,22 +39,22 @@ int ponerEnCola(tCola *p, const void *d, size_t tamElem)
     nue->tamInfo = tamElem;
     nue->sig = NULL;
 
-    // Si existe un elemento al final de la lista, asignarle nue como siguiente
     if (p->fin)
         p->fin->sig = nue;
-    // Si no existe, la lista estaba vacía, ini y fin quedan como el mismo nodo
     else
         p->ini = nue;
-    // asignar nue como último nodo de la lista
     p->fin = nue;
     return 1;
 }
 
 int sacarDeCola(tCola *p, void *d, size_t tamElem)
 {
-    tNodo *aux = p->ini;
+    if(!p)
+        return 0;
+    tNodoCola *aux;
     if (!p->ini)
         return 0;
+    aux = p->ini;
 
     memcpy(d, aux->info, tamElem < aux->tamInfo ? tamElem : aux->tamInfo);
     p->ini = aux->sig;
@@ -66,7 +68,7 @@ int sacarDeCola(tCola *p, void *d, size_t tamElem)
 
 int verSiguienteEnCola(const tCola *p, void *d, size_t tamElem)
 {
-    tNodo *aux = p->ini;
+    tNodoCola *aux = p->ini;
     if (!p->ini)
         return 0;
 
@@ -84,12 +86,24 @@ int colaVacia(const tCola *p)
 
 int cantidadElementosEnCola(const tCola *p)
 {
+    if (!p)
+        return 0;
     int ce = 0;
-    tNodo *aux = p->ini;
+    tNodoCola *aux = p->ini;
     while (aux)
     {
         ce ++;
         aux = aux->sig;
     }
     return ce;
+}
+
+void mapCola(tCola *p, void (*accion)(void*))
+{
+    tNodoCola *aux = p->ini;
+    while (aux)
+    {
+        accion(aux->info);
+        aux = aux->sig;
+    }
 }

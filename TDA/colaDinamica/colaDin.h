@@ -9,12 +9,12 @@
  * Cada nodo contiene un puntero a la información, el tamaño de la información
  * y un puntero al siguiente nodo en la cola.
  */
-typedef struct sNodo
+typedef struct sNodoCola
 {
     void *info;
     size_t tamInfo;
-    struct sNodo *sig;
-} tNodo;
+    struct sNodoCola *sig;
+} tNodoCola;
 
 /**
  * @brief Representa la cola dinámica.
@@ -22,8 +22,8 @@ typedef struct sNodo
  */
 typedef struct
 {
-    tNodo *ini;
-    tNodo *fin;
+    tNodoCola *ini;
+    tNodoCola *fin;
 } tCola;
 
 /**
@@ -80,5 +80,12 @@ int colaVacia(const tCola *p);
  * @return La cantidad de elementos actualmente en cola.
  */
 int cantidadElementosEnCola(const tCola *p);
+
+/**
+ * @brief Aplica una función a cada elemento de la cola sin modificarla.
+ * @param p Puntero a la cola cuyos elementos serán procesados.
+ * @param accion Puntero a la función que se aplicará a cada elemento.
+ */
+void mapCola(tCola *p, void (*accion)(void*));
 
 #endif // COLADIN_H
