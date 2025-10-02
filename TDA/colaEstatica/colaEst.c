@@ -4,6 +4,7 @@
 
 int crearCola(tCola *p)
 {
+    memset(p->cola, 0, TAM_COLA);
     p->pri = 0;
     p->ult = 0;
     p->tamDisp = TAM_COLA;
@@ -100,6 +101,12 @@ int cantidadElementosEnCola(const tCola *p)
             memcpy(((char *)&tamInfo) + ini, p->cola, fin);
         pos = fin ? fin : pos + ini;
         available -= sizeof(size_t) + tamInfo;
+        // Skip the data
+        if ((ini = minimo(tamInfo, TAM_COLA - pos)) != 0)
+            ; // No copy
+        if ((fin = tamInfo - ini) != 0)
+            ; // No copy
+        pos = fin ? fin : pos + ini;
         count++;
     }
     return count;
