@@ -57,7 +57,7 @@ int ponerEnListaInicio(tLista *p, const void *elem, const size_t tamElem);
  * @param *p Puntero a la lista en la que se va a insertar el elemento.
  * @param *elem Puntero a los datos a insertar.
  * @param tamElem Tamaño en bytes de los datos a insertar.
- * @return 1 en caso de éxito, 0 en caso de error. 
+ * @return 1 en caso de éxito, 0 en caso de error.
  */
 int ponerEnListaFin(tLista *p, const void *elem, const size_t tamElem);
 
@@ -121,17 +121,11 @@ int ponerEnOrden(tLista *p, const void *elem, const size_t tamElem, int (*cmp)(c
 void ordenarListaInsercion(tLista *p, int (*cmp)(const void *, const void *));
 
 /**
- * @brief Ordena la lista utilizando el método de mergesort.
- * @param *p Puntero a la lista.
- * @param cmp Función de comparación para ordenar los elementos.
- */
-void ordenarListaMergesort(tLista *p, int (*cmp)(const void *, const void *));
-
-/**
  * @brief Invierte el orden de los elementos en la lista usando recursividad.
  * @param *p Puntero a la lista.
  */
 void invertirLista(tLista* p);
+
 
 /**
  * @brief Busca el nodo con el menor valor en la lista según la función de comparación.
@@ -148,4 +142,5 @@ tNodo** buscarMenorLista(tLista *p, int (*cmp)(const void*, const void*));
  * @return 1 en caso de éxito, 0 en caso de error.
  */
 int ordenarListaSimple(tLista *p,int (*cmp)(const void*, const void*));
+
 #endif // LISTADIN_H

@@ -1,0 +1,24 @@
+# depslib dependency file v1.0
+1762648512 source:c:\dev\cprojects\tdarepo\tests\alumnos\src\lib\alumnos.c
+	"Alumnos.h"
+
+1762612984 c:\dev\cprojects\tdarepo\tests\alumnos\src\lib\alumnos.h
+	<stdio.h>
+	<stdlib.h>
+
+1762650233 source:c:\dev\cprojects\tdarepo\tests\alumnos\src\main.c
+	"main.h"
+
+1762647328 c:\dev\cprojects\tdarepo\tests\alumnos\src\lib\listadinamica\listadin.h
+	<stdlib.h>
+	<string.h>
+
+1762647310 source:c:\dev\cprojects\tdarepo\tests\alumnos\src\lib\listadinamica\listadin.c
+	"listaDin.h"
+
+1762649841 c:\dev\cprojects\tdarepo\tests\alumnos\src\main.h
+	<stdio.h>
+	<string.h>
+	"lib/Alumnos.h"
+	"lib\listaDinamica\listaDin.h"
+
