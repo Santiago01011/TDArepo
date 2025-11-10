@@ -2,12 +2,12 @@
 <CodeBlocks_project_file>
 	<FileVersion major="1" minor="6" />
 	<Project>
-		<Option title="Recuperatorio_alumnos" />
+		<Option title="LaGranOferta" />
 		<Option pch_mode="2" />
 		<Option compiler="gcc" />
 		<Build>
 			<Target title="Debug">
-				<Option output="bin/Debug/Recuperatorio_alumnos" prefix_auto="1" extension_auto="1" />
+				<Option output="bin/Debug/LaGranOferta" prefix_auto="1" extension_auto="1" />
 				<Option object_output="obj/Debug/" />
 				<Option type="1" />
 				<Option compiler="gcc" />
@@ -16,7 +16,7 @@
 				</Compiler>
 			</Target>
 			<Target title="Release">
-				<Option output="bin/Release/Recuperatorio_alumnos" prefix_auto="1" extension_auto="1" />
+				<Option output="bin/Release/LaGranOferta" prefix_auto="1" extension_auto="1" />
 				<Option object_output="obj/Release/" />
 				<Option type="1" />
 				<Option compiler="gcc" />
@@ -31,20 +31,26 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
-		<Unit filename="../src/lib/Alumnos.c">
+		<Unit filename="lib/Fecha.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="../src/lib/Alumnos.h" />
-		<Unit filename="../src/lib/listaDinamica/listaDin.c">
+		<Unit filename="lib/Fecha.h" />
+		<Unit filename="lib/Stock.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="../src/lib/listaDinamica/listaDin.h" />
-		<Unit filename="../src/main.c">
+		<Unit filename="lib/Stock.h" />
+		<Unit filename="lib/listaDin.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="../src/main.h" />
-		<Extensions>
-			<lib_finder disable_auto="1" />
-		</Extensions>
+		<Unit filename="lib/listaDin.h" />
+		<Unit filename="lib/menu.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="lib/menu.h" />
+		<Unit filename="main.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="main.h" />
+		<Extensions />
 	</Project>
 </CodeBlocks_project_file>

@@ -1,0 +1,47 @@
+# depslib dependency file v1.0
+1762778255 source:c:\dev\cprojects\tdarepo\tests\lagranoferta\lagranoferta\main.c
+	"main.h"
+
+1762705556 c:\dev\cprojects\tdarepo\tests\lagranoferta\lagranoferta\main.h
+	<stdio.h>
+	<stdlib.h>
+	"lib/Stock.h"
+	"lib/listaDin.h"
+	"lib/menu.h"
+
+1762779151 source:c:\dev\cprojects\tdarepo\tests\lagranoferta\lagranoferta\lib\fecha.c
+	"Fecha.h"
+
+1762778870 c:\dev\cprojects\tdarepo\tests\lagranoferta\lagranoferta\lib\fecha.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1762781761 source:c:\dev\cprojects\tdarepo\tests\lagranoferta\lagranoferta\lib\stock.c
+	"Stock.h"
+
+1762781625 c:\dev\cprojects\tdarepo\tests\lagranoferta\lagranoferta\lib\stock.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"Fecha.h"
+
+1762783221 source:c:\dev\cprojects\tdarepo\tests\lagranoferta\lagranoferta\lib\listadin.c
+	"listaDin.h"
+
+1762783186 c:\dev\cprojects\tdarepo\tests\lagranoferta\lagranoferta\lib\listadin.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1762728454 c:\dev\cprojects\tdarepo\tests\lagranoferta\lagranoferta\lib\menu.h
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	"Stock.h"
+	"Fecha.h"
+	"listaDin.h"
+
+1762782467 source:c:\dev\cprojects\tdarepo\tests\lagranoferta\lagranoferta\lib\menu.c
+	"menu.h"
+
