@@ -1,0 +1,6 @@
+Pedido 124 procesado:
+ -       marn-martillo negro      :      3      1 $  500.00 $  500.00
+ -     llave6-llave 6'            :     32      1 $  450.00 $  450.00
+ -      pinza-pinza               :     13      1 $  660.00 $  660.00
+                                       TOTAL: $1610.00
+
